@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "sources": ["../src/List.ts"],
+  "sourcesContent": [
+    "export interface List<T> {\n  readonly length: number;\n  at(index: number): T | undefined;\n}\n\nexport function forEach<T>(list: List<T> | undefined, callback: (value: T | undefined, index: number) => void): void {\n  if (list) {\n    for (let i = 0; i < list.length; i++) {\n      const elem = list.at(i);\n      callback(elem, i);\n    }\n  }\n}\n\nexport function map<T, R>(list: List<T>, callback: (value: T | undefined, index: number) => R): (R | undefined)[] {\n  const r: (R | undefined)[] = []\n  for (let i = 0; i < list.length; i++) {\n    const elem = list.at(i);\n    r.push(callback(elem, i));\n  }\n  return r;\n}\n"
+  ],
+  "mappings": "AAKO,SAAS,CAAU,CAAC,EAA2B,EAA+D,CACnH,GAAI,EACF,QAAS,EAAI,EAAG,EAAI,EAAK,OAAQ,IAAK,CACpC,MAAM,EAAO,EAAK,GAAG,CAAC,EACtB,EAAS,EAAM,CAAC,GAKf,SAAS,CAAS,CAAC,EAAe,EAAyE,CAChH,MAAM,EAAuB,CAAC,EAC9B,QAAS,EAAI,EAAG,EAAI,EAAK,OAAQ,IAAK,CACpC,MAAM,EAAO,EAAK,GAAG,CAAC,EACtB,EAAE,KAAK,EAAS,EAAM,CAAC,CAAC,EAE1B,OAAO",
+  "debugId": "36EA9B6698519D4464756e2164756e21",
+  "names": []
+}
