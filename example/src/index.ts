@@ -1,3 +1,7 @@
-import { Hello } from "bun-template";
+import { shadowProcessor } from "canvas-processor";
 
-export { Hello };
+
+export function makeShadow(canvas: HTMLCanvasElement) {
+  const context = canvas.getContext("2d");
+  shadowProcessor(context!);
+}

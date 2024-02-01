@@ -1,13 +1,36 @@
 <html>
   <head>
-    <title>Bun Template</title>
+    <title>Canvas Processor</title>
   </head>
   <body>
+    <canvas id="canvas"></canvas>
+    <canvas id="shadow-canvas"></canvas>
   </body>
   <script type="module">
-    import { Hello } from './dist/index.js';
+    import { makeShadow } from "./dist/index.js"
 
-    const h1 = document.body.appendChild(document.createElement("h1"));
-    h1.textContent = Hello.hello();
+    function copyCanvas(canvas, source) {
+      canvas.width = source.width;
+      canvas.height = source.height;
+      canvas.style.width = `${canvas.width / 2}px`;
+      canvas.style.height = `${canvas.height / 2}px`;
+      canvas.getContext("2d").drawImage(source, 0, 0);
+      return canvas;
+    }
+
+    const canvas = document.getElementById("canvas");
+    const image = new Image();
+    image.src = "https://jacklehamster.github.io/bun-engine/icon.png";
+    image.crossOrigin = "anonymous";
+    image.addEventListener("load", () => {
+      canvas.width = image.naturalWidth;
+      canvas.height = image.naturalHeight;
+      canvas.style.width = `${canvas.width/2}px`;
+      canvas.style.height = `${canvas.height/2}px`;
+      canvas.getContext("2d").drawImage(image, 0, 0);
+
+      const shadowCanvas = document.getElementById("shadow-canvas");
+      makeShadow(copyCanvas(shadowCanvas, canvas));
+    });
   </script>
 </html>

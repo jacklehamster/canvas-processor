@@ -1,3 +1,3 @@
-var j=(m)=>{if(m){const g=m.getImageData(0,0,m.canvas.width,m.canvas.height),{data:b}=g;for(let f=0;f<b.length;f+=4)b[f]=b[f+1]=b[f+2]=0;m.putImageData(g,0,0)}};export{j as shadowProcessor};
+var k=(m)=>{if(m){const j=m.getImageData(0,0,m.canvas.width,m.canvas.height),{data:f}=j;for(let b=0;b<f.length;b+=4)f[b]=f[b+1]=f[b+2]=0;m.putImageData(j,0,0)}};export{k as shadowProcessor};
 
-//# debugId=D21FF2CA4F561DBD64756e2164756e21
+//# debugId=52523CA6097519AA64756e2164756e21

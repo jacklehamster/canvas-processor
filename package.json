@@ -14,7 +14,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/jacklehamster/canvas-processor.git"
+    "url": "git@github.com:jacklehamster/canvas-processor.git"
   },
   "homepage": "<fill in homepage>",
   "author": {

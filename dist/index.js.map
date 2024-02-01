@@ -5,6 +5,6 @@
     "import { CanvasProcessor } from \"../CanvasProcessor\";\n\nexport const shadowProcessor: CanvasProcessor = context => {\n  if (context) {\n    const imageData = context.getImageData(0, 0, context.canvas.width, context.canvas.height);\n    const { data } = imageData;\n    for (let i = 0; i < data.length; i += 4) {\n      data[i] = data[i + 1] = data[i + 2] = 0;\n    }\n    context.putImageData(imageData, 0, 0);\n  }\n}\n"
   ],
   "mappings": "AAEO,IAAM,EAAmC,KAAW,CACzD,GAAI,EAAS,CACX,MAAM,EAAY,EAAQ,aAAa,EAAG,EAAG,EAAQ,OAAO,MAAO,EAAQ,OAAO,MAAM,GAChF,QAAS,EACjB,QAAS,EAAI,EAAG,EAAI,EAAK,OAAQ,GAAK,EACpC,EAAK,GAAK,EAAK,EAAI,GAAK,EAAK,EAAI,GAAK,EAExC,EAAQ,aAAa,EAAW,EAAG,CAAC",
-  "debugId": "D21FF2CA4F561DBD64756e2164756e21",
+  "debugId": "52523CA6097519AA64756e2164756e21",
   "names": []
 }
