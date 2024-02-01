@@ -14,3 +14,11 @@ https://bun.sh/
 ```bash
 curl -fsSL https://bun.sh/install | bash
 ```
+
+## Run example
+
+[https://jacklehamster.github.io/canvas-processor/example/](https://jacklehamster.github.io/canvas-processor/example/)
+
+## Github Source
+
+[https://github.com/jacklehamster/canvas-processor/](https://github.com/jacklehamster/canvas-processor/)
