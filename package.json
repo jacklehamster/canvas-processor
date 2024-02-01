@@ -2,7 +2,7 @@
   "name": "canvas-processor",
   "module": "src/index.ts",
   "description": "Process canvas context to update images before they are used in games as texture.",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "keywords": [
     "bun",
     "bunjs",
